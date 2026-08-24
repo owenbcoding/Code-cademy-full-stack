@@ -1,6 +1,12 @@
 // Topic: Node, Express, and PostgreSQL
-// Requires `npm install express pg` in this folder to actually run.
+// From 08-Node-Express-and-PostgreSQL.md
 
+console.log("Hello, World!");
+
+// Node-only global (not available in the browser):
+console.log(process.env.PWD);
+
+// --- Express (requires `npm install express` in this folder) ---
 const express = require("express");
 const app = express();
 
@@ -12,8 +18,7 @@ app.listen(3000, () => {
   console.log("Server running on http://localhost:3000");
 });
 
-// PostgreSQL example (requires a running Postgres instance + `pg`):
-//
+// --- PostgreSQL (requires a running Postgres instance + `npm install pg`) ---
 // const { Pool } = require("pg");
 // const pool = new Pool({ connectionString: process.env.DATABASE_URL });
 // const result = await pool.query("SELECT NOW()");

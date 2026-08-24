@@ -1,13 +1,32 @@
-// Topic: JS Functions
-// - function declarations, function expressions, and arrow functions
-// - Parameters can have default values
-// - Arrow functions are shorter and don't bind their own `this`
+// Topic: JS Functions & Scope
+// From 03-JS-Functions.md
 
-function add(a, b = 0) {
-  return a + b;
+// Function declaration
+function rectangleArea(width, height) {
+  if (width < 0 || height < 0) {
+    return "You need positive integers to calculate area!";
+  }
+  return width * height;
 }
 
-const multiply = (a, b) => a * b;
+console.log(rectangleArea(5, 3)); // 15
 
-console.log(add(2, 3));
-console.log(multiply(2, 3));
+// Default parameters
+function greeting(personName = "stranger") {
+  console.log(`Hello, ${personName}!`);
+}
+
+greeting("Nick"); // "Hello, Nick!"
+greeting();       // "Hello, stranger!"
+
+// Arrow function (concise body)
+const greaterThanFive = (num) => (num > 5 ? true : false);
+console.log(greaterThanFive(8)); // true
+
+// Block scope
+const logVisibleLightWaves = () => {
+  let lightWaves = "Moonlight";
+  console.log(lightWaves); // "Moonlight"
+};
+
+logVisibleLightWaves();
