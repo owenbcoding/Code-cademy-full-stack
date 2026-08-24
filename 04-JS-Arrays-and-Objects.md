@@ -781,23 +781,17 @@ Lesson topics (outline only — add your own notes and examples as you work thro
 How objects behave in more depth: execution context, encapsulation, and common patterns beyond simple literals.
 
 #### The this Keyword
-Objects are Collections of related data and functionality. You store that functionality.
 
 In methods and functions, **`this`** refers to a context (often the object a method was called on). Its value depends on **how** the function is invoked.
 
-Remember that objects in javascript are like contianers which store data and functionality, you will build upon fundamentals of creating objects and explore some advanced conecpts.
+Objects in JavaScript are like containers that store data and functionality. This section builds on the fundamentals of creating objects and explores some advanced concepts, such as:
 
-Such as,
-using the this keyword
-Preview: Docs Loading link description keyword
-conveying privacy in JavaScript methodsw
-defining getters and setters in objects
-creating factory functions using destructuring techniques
-Preview: Docs Loading link description techniques
+- using the `this` keyword
+- conveying privacy in JavaScript methods
+- defining getters and setters in objects
+- creating factory functions using destructuring techniques
 
-Objects are collections of related data and functionality. You store functionality in methods in our objects.
-
-Heres an example of an object using the this keyword
+Here's an example of an object using the `this` keyword:
 ```js
 const goat = {
   dietType: 'herbivore',
@@ -819,9 +813,8 @@ goat.makeSound(); // Prints baaa
 ```
 
 #### Arrow Functions and this
-For a method, the calling object is the object the method belongs to. If we use the this keyword
-Preview: Docs It is often used within an object method, but what it refers to will vary depending on the execution context. in a method, then the value of this is the calling object. However, it becomes a bit more complicated when we start using arrow functions Preview: Docs Loading link description for methods Preview: Docs Loading link description
-. Take a look at the example below:
+
+For a method, the **calling object** is the object the method belongs to. If we use `this` in a method, then the value of `this` is the calling object. However, it becomes a bit more complicated when we start using arrow functions for methods. Take a look at the example below:
 ```js
 const goat = {
   dietType: 'herbivore',
@@ -837,7 +830,8 @@ goat.diet(); // Prints undefined
 
 ```
 **Arrow functions** do not have their own **`this`** binding; they inherit **`this`** from the surrounding scope. That differs from regular functions and affects how you write methods and callbacks.
-This si an example of the this keyword not being used with arrow functions.
+
+Here's an example of the `this` keyword being used correctly with a regular (non-arrow) method:
 
 ```js
 const robot = {
@@ -853,7 +847,8 @@ console.log(robot.provideInfo());
 ```
 
 #### Privacy
-Accessing and updating Properties is fundamental in working with obkects. Altho there are some cases in which we dont want other code simply accessing and updating an object's properties. with privacy in objects you can define it as the idea that only certain properties should be mutable or able to change in value. Certain Languages have privacy 
+
+Accessing and updating properties is fundamental to working with objects. There are cases, though, where we don't want other code simply accessing and updating an object's properties directly. **Privacy** in objects is the idea that only certain properties should be mutable or able to change in value. Some languages have built-in privacy features, but JavaScript objects do not — instead, we rely on conventions.
 
 Patterns for hiding implementation details: e.g. variables in closures, naming conventions, and (in modern JS) **`#` private fields** on classes. Goal: control what code outside an object can read or change.
 
@@ -1127,33 +1122,19 @@ const newRobot = Object.assign({laserBlaster: true, voiceRecognition: true}, rob
 console.log(newRobot);
 ```
 
-Let’s review the concepts covered in this lesson:
+Let's review the concepts covered in this lesson:
 
-The object that a method belongs to is called the calling object.
-The 
-this
-Preview: Docs Loading link description
- keyword refers to the calling object and can be used to access properties of the calling object.
-Methods
-Preview: Docs Loading link description
- do not automatically have access to other internal properties of the calling object.
-The value of this depends on where the this is being accessed from.
-We cannot use
-arrow functions
-Preview: Docs Loading link description
- as methods if we want to access other internal properties.
-JavaScript 
-objects
-Preview: Docs Loading link description
- do not have built-in privacy — however, there are conventions to follow to notify other developers about the intent of the code.
-The usage of an underscore before a property name means that the original developer did not intend for that property to be directly changed.
-Setter and getter methods allow for more detailed ways of accessing and assigning properties.
-Factory 
-functions
-Preview: Docs Loading link description
- allow us to create object instances quickly and repeatedly.
-There are different ways to use object destructuring: one way is the property value shorthand and another is destructured assignment.
-As with any concept, it is a good skill to learn how to use the documentation with objects!
+- The object that a method belongs to is called the **calling object**.
+- The **`this`** keyword refers to the calling object and can be used to access properties of the calling object.
+- **Methods** do not automatically have access to other internal properties of the calling object.
+- The value of `this` depends on where it is being accessed from.
+- We cannot use **arrow functions** as methods if we want to access other internal properties via `this`.
+- JavaScript **objects** do not have built-in privacy — however, there are conventions to follow to notify other developers about the intent of the code.
+- The usage of an underscore before a property name means that the original developer did not intend for that property to be directly changed.
+- Setter and getter methods allow for more detailed ways of accessing and assigning properties.
+- **Factory functions** allow us to create object instances quickly and repeatedly.
+- There are different ways to use object destructuring: one way is property value shorthand, and another is destructured assignment.
+- As with any concept, it is a good skill to learn how to use the documentation with objects!
 
 If you want to challenge yourself:
 
