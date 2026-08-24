@@ -41,13 +41,15 @@ We’ve added exams to help you assess your proficiency as you build toward job-
 
 ## JS Notes Order
 
-Use this sequence for a clean learning flow:
+All lesson notes are consolidated in [`notes.md`](notes.md), in order:
 
-1. [`01-Intro-JS.md`](01-Intro-JS.md)
-2. [`02-JS-Basics.md`](02-JS-Basics.md)
-3. [`03-JS-Functions.md`](03-JS-Functions.md)
-4. [`04-JS-Arrays-and-Objects.md`](04-JS-Arrays-and-Objects.md)
-5. [`05-JS-DOM-and-Events.md`](05-JS-DOM-and-Events.md)
-6. [`06-JS-Async-and-APIs.md`](06-JS-Async-and-APIs.md)
-7. [`07-React-and-Redux.md`](07-React-and-Redux.md)
-8. [`08-Node-Express-and-PostgreSQL.md`](08-Node-Express-and-PostgreSQL.md)
+1. HTML & CSS Foundations
+2. JavaScript Basics
+3. JavaScript Functions & Scope
+4. JS Arrays and Objects
+5. JS DOM and Events
+6. JS Async and APIs
+7. React and Redux
+8. Node, Express, and PostgreSQL
+
+Runnable code for each lesson lives in [`demo/`](demo/) (e.g. `demo/02-js-basics/index.js`).
