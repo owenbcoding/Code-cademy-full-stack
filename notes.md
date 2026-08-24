@@ -2,7 +2,7 @@
 
 > Full Stack (JavaScript) career path
 > Use this as a running cheat sheet. Add notes as you go.
-> Full explanations and examples live in the top-level `../01-Intro-JS.md` … `../08-Node-Express-and-PostgreSQL.md` files — this is the quick-reference version.
+> Full explanations and examples live in the top-level `01-Intro-JS.md` … `08-Node-Express-and-PostgreSQL.md` files — this is the quick-reference version.
 
 ---
 
