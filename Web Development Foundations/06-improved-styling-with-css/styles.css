@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #e0f2fe;
+}
+
+.layout {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+.card {
+  width: min(100%, 36rem);
+  padding: 2rem;
+  border: 2px solid #0369a1;
+  border-radius: 1rem;
+  background: #fff;
+}
+
