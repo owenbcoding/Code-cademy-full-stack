@@ -9,10 +9,14 @@ This is a **practice folder for revising JavaScript concepts and logic**, built 
 - **`notes.md`**
   Full lesson explanations, vocab, and review notes for all 8 lessons (HTML/CSS foundations through Node/Express/PostgreSQL), plus a table of useful built-in methods.
 
-- **`demo/01-intro-js/` through `demo/08-node-express-and-postgresql/`**
-  One folder per lesson topic, each containing an `index.js` (or `index.html` + `index.js` where the DOM is involved) with runnable code for that concept (variables, functions, arrays/objects, async/APIs, Express, etc.). Folders are numbered in the order the topics were covered.
+- **`Building interactive websites/`**
+  The JavaScript lessons are grouped into `Part 1/` (syntax, functions,
+  arrays, objects, and iterators) and `Part 2/` (DOM, asynchronous APIs,
+  React/Redux, and Node/Express/PostgreSQL). Each topic has a named folder
+  containing `index.js` and a matching `practice-[lesson-name].js` file with
+  three practice sections and three examples in each section.
 
-- **`demo/practice.js`**
+- **`practice.js`**
   A single scratch file with numbered practice problems (e.g. `1a`, `1b`, `2a`...) matching the lesson topics above. Each problem is worked through directly beneath its prompt comment.
 
 - **`assets/`**
@@ -20,20 +24,22 @@ This is a **practice folder for revising JavaScript concepts and logic**, built 
 
 ## Running it
 
-Most lessons run directly with Node from the `demo/` folder:
+Most lessons run directly with Node from the repository root:
 
 ```bash
-node demo/01-intro-js/index.js
-node demo/practice.js
+node "Building interactive websites/Part 1/Introduction to JavaScript/index.js"
+node practice.js
 ```
 
-Lesson 05 (DOM and Events) needs a browser — open `demo/05-js-dom-and-events/index.html` directly.
+Lesson 05 (DOM and Events) needs a browser — open
+`Building interactive websites/Part 2/DOM and Events/index.html`
+directly.
 
 Lesson 08 (Express/PostgreSQL) needs dependencies installed first:
 
 ```bash
 npm install express pg
-node demo/08-node-express-and-postgresql/index.js
+node "Building interactive websites/Part 2/Node Express and PostgreSQL/index.js"
 ```
 
 Lesson 07 (React/Redux) is reference pseudo-code only — scaffold a real app (e.g. Vite) to actually run it.
