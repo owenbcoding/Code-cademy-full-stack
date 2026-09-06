@@ -1,0 +1,21 @@
+{
+  // Ollama (official extension) - points at local Ollama API
+  "ollama.apiUrl": "http://localhost:11434",
+  "ollama.model": "qwen2.5-coder:7b",
+
+  // Sourcegraph Cody (if you prefer using Cody pointing at Ollama)
+  "cody.serverUrl": "http://localhost:11434/api/generate",
+  "cody.model": "qwen2.5-coder:7b",
+
+  // Generic Local LLM patterns (some extensions use these keys)
+  "localAI.serverUrl": "http://localhost:11434",
+  "localAI.model": "qwen2.5-coder:7b",
+
+  // Disable auto-complete to focus on active learning
+  "editor.inlineSuggest.enabled": false,
+  "editor.quickSuggestions": {
+    "comments": "off",
+    "strings": "off",
+    "other": "off"
+  }
+}
