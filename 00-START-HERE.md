@@ -57,4 +57,4 @@ Runnable JavaScript code for each lesson is organised in
 The first course section is organised in
 [`Web Development Foundations/`](Web%20Development%20Foundations/).
 The next section is organised in
-[`Making A Website Accessible/`](Making%20A%20Website%20Accessible/).
+[`Making A Website Accessible/`](Building%20interactive%20websites/Making%20A%20Website%20Accessible/).
