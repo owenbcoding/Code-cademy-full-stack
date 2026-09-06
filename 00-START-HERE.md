@@ -52,4 +52,7 @@ All lesson notes are consolidated in [`notes.md`](notes.md), in order:
 7. React and Redux
 8. Node, Express, and PostgreSQL
 
-Runnable code for each lesson lives in [`demo/`](demo/) (e.g. `demo/02-js-basics/index.js`).
+Runnable JavaScript code for each lesson is organised in
+[`Building interactive websites/`](Building%20interactive%20websites/).
+The first course section is organised in
+[`Web Development Foundations/`](Web%20Development%20Foundations/).
