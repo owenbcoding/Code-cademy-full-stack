@@ -16,9 +16,13 @@ This is a **practice folder for revising JavaScript concepts and logic**, built 
   containing `index.js` and a matching `practice-[lesson-name].js` file with
   three practice sections and three examples in each section.
 
-- **`Making A Website Accessible/`**
+- **`Building interactive websites/Making A Website Accessible/`**
   The next course section covers accessibility fundamentals, semantic HTML,
   accessible forms, visual design, and accessibility testing.
+
+- **`Front-end Development/`**
+  The later front-end modules include JavaScript Syntax Part 3, JavaScript
+  Testing, HTTP requests, React, Redux, and Git/GitHub Part 2.
 
 - **`practice.js`**
   A single scratch file with numbered practice problems (e.g. `1a`, `1b`, `2a`...) matching the lesson topics above. Each problem is worked through directly beneath its prompt comment.
