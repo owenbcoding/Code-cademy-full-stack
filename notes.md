@@ -1,7 +1,7 @@
 # JavaScript Fundamentals — Notes
 
 > Full Stack (JavaScript) career path
-> Consolidated from the old `01-Intro-JS.md` … `08-Node-Express-and-PostgreSQL.md` files. Runnable code lives in each lesson's `demo/*/index.js` (or `index.html`); this file keeps the explanations, vocab, and review notes.
+> Consolidated from the old `01-Intro-JS.md` … `08-Node-Express-and-PostgreSQL.md` files. Runnable code lives in each lesson's `*/index.js` (or `index.html`); this file keeps the explanations, vocab, and review notes.
 
 ---
 
@@ -43,13 +43,13 @@ Alignment on a grid: `justify-items`/`align-items` position **individual** items
 
 ## 02 — JavaScript Basics
 
-JavaScript is a flexible, powerful language used in both the **browser (front-end)** and on the **server (back-end)** via environments like Node.js. It's standardized as **ECMAScript (ES)**. ES6 ("modern JavaScript") introduced `let`/`const`, arrow functions, classes, default parameters, Promises, and more. Outside the browser, JS runs via **Node.js** — create a `.js` file and run it with `node file.js` (see `demo/01-intro-js/index.js`).
+JavaScript is a flexible, powerful language used in both the **browser (front-end)** and on the **server (back-end)** via environments like Node.js. It's standardized as **ECMAScript (ES)**. ES6 ("modern JavaScript") introduced `let`/`const`, arrow functions, classes, default parameters, Promises, and more. Outside the browser, JS runs via **Node.js** — create a `.js` file and run it with `node file.js` (see `Building interactive websites/Part 1/Introduction to JavaScript/index.js`).
 
 **Data types** — eight fundamental types: `number` (including decimals), `bigint` (very large integers, `123n`), `string`, `boolean`, `null` (intentional absence of a value), `undefined` (declared but not assigned), `symbol` (unique identifiers), and `object` (collections of related data/behavior). The first seven are **primitive**; objects are more complex.
 
 **Arithmetic operators**: `+` `-` `*` `/` `%`. `console.log(...)` evaluates the expression inside and logs the result.
 
-**Strings**: append with `+` (**concatenation**), or use **template literals** (backticks + `${}`) for cleaner interpolation — see `demo/02-js-basics/index.js`.
+**Strings**: append with `+` (**concatenation**), or use **template literals** (backticks + `${}`) for cleaner interpolation — see `Building interactive websites/Part 1/JavaScript Basics/index.js`.
 
 **Properties & methods**: JS wraps primitive values in an object so they expose properties (e.g. `"Hello".length`) and methods (e.g. `"hello".toUpperCase()`), accessed via dot notation. A **prototype** is the object other objects inherit methods/properties from.
 
@@ -137,9 +137,25 @@ An **object** groups related data (and optionally behavior) as **key-value pairs
 
 **Built-in Object methods**: `Object.keys()`/`Object.values()`/`Object.entries()` (iteration), `Object.assign()` (merge/copy properties into a target), `Object.freeze()`, `Object.create()`, `Object.hasOwn()`, plus instance methods every object literal inherits from `Object.prototype` (`hasOwnProperty`, `valueOf`, etc.).
 
-**Vocab**: array, index, element, zero-indexed, `.length`, `.push()`/`.pop()`, mutating method, pass by reference, nested array, `for`/`for...of`/`for...in`, `while`/`do…while`, `break`/`continue`, nested loop, object, property, method, object literal, dot/bracket notation, `Object.keys`/`values`/`entries`.
+### Iterators
 
-**Remember**: arrays are ordered and zero-indexed; `const` arrays/objects can still be mutated even though the binding can't be reassigned; prefer reverse `for` loops when removing items during iteration; a `while` loop needs a condition that eventually becomes false; `break` stops the whole loop, `continue` skips one iteration; nested loops can be slow on large data; choose arrays for ordered lists, objects for records/maps.
+**Iterator methods** are built-in array methods that take a **callback function** and run it once per element, replacing manual `for` loops for most common operations.
+
+`.forEach(callback)` runs the callback on every element for its side effects and always returns `undefined` — use it when you're not building a new value (e.g. logging).
+
+`.map(callback)` returns a **new array** the same length as the original, where each element is the callback's return value for the corresponding input element — use it to transform data without mutating the source array.
+
+`.filter(callback)` returns a **new array** containing only the elements for which the callback returns truthy — the callback acts as a test, not a transform.
+
+`.findIndex(callback)` returns the **index** of the first element for which the callback returns truthy, or `-1` if none match; `.find(callback)` works the same way but returns the **element itself** (or `undefined`).
+
+`.reduce((accumulator, currentValue) => {...}, initialValue)` boils an array down to a single value by carrying an **accumulator** through each element — the callback's return value becomes the accumulator for the next iteration. `initialValue` sets the accumulator's starting value (and is the seed returned if the array is empty); omitting it makes `.reduce()` use the array's first element as the initial accumulator instead, which is usually undesirable.
+
+All of these accept the callback in the form `(element, index, array) => {...}` — `index`/`array` are optional and often omitted when unneeded. None of `.map`/`.filter`/`.find`/`.findIndex`/`.reduce` mutate the original array (unlike `.push`/`.pop`); `.forEach` doesn't mutate either, though the callback itself could mutate elements if written to.
+
+**Vocab**: array, index, element, zero-indexed, `.length`, `.push()`/`.pop()`, mutating method, pass by reference, nested array, `for`/`for...of`/`for...in`, `while`/`do…while`, `break`/`continue`, nested loop, object, property, method, object literal, dot/bracket notation, `Object.keys`/`values`/`entries`, iterator method, callback, accumulator.
+
+**Remember**: arrays are ordered and zero-indexed; `const` arrays/objects can still be mutated even though the binding can't be reassigned; prefer reverse `for` loops when removing items during iteration; a `while` loop needs a condition that eventually becomes false; `break` stops the whole loop, `continue` skips one iteration; nested loops can be slow on large data; choose arrays for ordered lists, objects for records/maps; prefer iterator methods (`.map`/`.filter`/`.reduce`/etc.) over manual loops when transforming or summarizing array data — they're more declarative and don't mutate the source array; always pass `.reduce()` an `initialValue` unless you specifically want the first element as the starting accumulator.
 
 ---
 
@@ -195,7 +211,7 @@ An **object** groups related data (and optionally behavior) as **key-value pairs
 
 A **runtime environment** is where your program executes — it determines which **global objects** you can access and how your program talks to the OS/network/filesystem. JS commonly runs in two environments: the **browser** (front-end, `window`, DOM) and **Node** (back-end, filesystem, env vars, network APIs — no `window`/DOM, but you get `process`, `__dirname`, module utilities).
 
-`process.env` holds environment variables (e.g. `PWD`). Run a Node file with `node file.js` (see `demo/08-node-express-and-postgresql/index.js`).
+`process.env` holds environment variables (e.g. `PWD`). Run a Node file with `node file.js` (see `Building interactive websites/Part 2/Node Express and PostgreSQL/index.js`).
 
 **Express** is a minimal web framework for Node: `express()` creates an app, `app.get/post(...)` defines routes, `app.use` registers middleware, `express.json()` parses JSON bodies.
 
@@ -222,6 +238,9 @@ A **runtime environment** is where your program executes — it determines which
 | `arr.length` | Length of an array |
 | `arr.filter(fn)` | Filter array by condition |
 | `arr.map(fn)` | Transform array elements |
+| `arr.forEach(fn)` | Run a function on each element (no new array) |
+| `arr.reduce(fn, init)` | Boil an array down to a single value |
+| `arr.find(fn)` / `arr.findIndex(fn)` | First matching element / its index |
 | `arr.includes(val)` | Check if a value exists in an array |
 | `arr.join(', ')` | Join array into a string |
 | `str.split(',')` | Split string into an array |
