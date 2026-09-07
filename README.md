@@ -24,6 +24,20 @@ This is a **practice folder for revising JavaScript concepts and logic**, built 
   The later front-end modules include JavaScript Syntax Part 3, JavaScript
   Testing, HTTP requests, React, Redux, and Git/GitHub Part 2.
 
+- **`Back-End Development/`**
+  Practice prompts for back-end development, Express.js, authentication,
+  testing, relational databases, PostgreSQL, API documentation, and an
+  e-commerce REST API portfolio project.
+
+- **`Full-Stack Development/`**
+  Practice prompts for connecting front-end and back-end systems, deployment,
+  security, operating systems, DevOps, and an e-commerce client portfolio
+  project.
+
+- **`Interview Prep/`**
+  Practice prompts for technical interview expectations, data structures,
+  algorithms, graph search, communication, and portfolio development.
+
 - **`practice.js`**
   A single scratch file with numbered practice problems (e.g. `1a`, `1b`, `2a`...) matching the lesson topics above. Each problem is worked through directly beneath its prompt comment.
 
