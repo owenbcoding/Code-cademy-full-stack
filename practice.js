@@ -22,7 +22,10 @@ console.log("I have 2 dogs.");
 
 
 // Problem 1c: Log two separate strings on two separate lines.
-
+const lineOne = "your first sentence here";
+const lineTwo = "your second sentence here";
+console.log(lineOne);
+console.log(lineTwo);
 
 // ------------------------------------------------------------
 // 02 — JS BASICS
@@ -30,6 +33,7 @@ console.log("I have 2 dogs.");
 
 // Problem 2a: Create a variable called firstName and assign
 //             your first name to it. Then log it.
+
 
 
 // Problem 2b: Create two number variables, a and b, assign
