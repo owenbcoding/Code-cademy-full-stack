@@ -34,21 +34,29 @@ console.log(lineTwo);
 // Problem 2a: Create a variable called firstName and assign
 //             your first name to it. Then log it.
 
-
+let firstName = "Owen";
+console.log(firstName);
 
 // Problem 2b: Create two number variables, a and b, assign
 //             any numbers to them, then log their sum.
-
+let a = 5
+let b = 10
+console.log(a + b);
 
 // Problem 2c: Create a price variable (number) and a label
 //             variable (string). Log them together in one
 //             sentence using a template literal, e.g.
 //             "The price of Coffee is €3.50"
 
+const price = 3.5;
+const label = "coffee";
+console.log(`The price of ${label} is €${price}`);
+
 
 // Problem 2d: Create a boolean variable isOnline and log
 //             either "Online" or "Offline" based on its value.
 //             Hint: use a ternary — x ? 'yes' : 'no'
+
 
 
 // ------------------------------------------------------------
