@@ -57,7 +57,8 @@ console.log(`The price of ${label} is €${price}`);
 //             either "Online" or "Offline" based on its value.
 //             Hint: use a ternary — x ? 'yes' : 'no'
 
-
+let isOnline = true;
+console.log(isOnline ? "Online" : "Offline");
 
 // ------------------------------------------------------------
 // 03 — JS FUNCTIONS
