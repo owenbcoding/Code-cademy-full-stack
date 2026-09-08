@@ -68,10 +68,16 @@ console.log(isOnline ? "Online" : "Offline");
 //             numbers and returns their sum. Call it and log
 //             the result.
 
+function add(num1, num2){
+    return num1 + num2;
+}
+
+console.log(add(5, 7));
 
 // Problem 3b: Write an arrow function called greet that takes
 //             a name parameter and returns "Hello, {name}!".
 //             Call it with your own name and log the result.
+
 
 
 // Problem 3c: Give add() a default value for its second
