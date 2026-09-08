@@ -78,7 +78,11 @@ console.log(add(5, 7));
 //             a name parameter and returns "Hello, {name}!".
 //             Call it with your own name and log the result.
 
+const greet = (name) => {
+return `Hello, ${name}!`;
+};
 
+console.log(greet("Owen"));
 
 // Problem 3c: Give add() a default value for its second
 //             parameter so add(5) works without a second arg.
