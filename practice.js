@@ -78,7 +78,7 @@ console.log(add(5, 7));
 //             a name parameter and returns "Hello, {name}!".
 //             Call it with your own name and log the result.
 
-const greet = (name) => {
+ const greet = (name) => {
 return `Hello, ${name}!`;
 };
 
@@ -87,6 +87,11 @@ console.log(greet("Owen"));
 // Problem 3c: Give add() a default value for its second
 //             parameter so add(5) works without a second arg.
 
+function add(num1, num2 = 0) {
+return num1 + num2;
+}
+
+console.log(add(5));
 
 // ------------------------------------------------------------
 // 04 — JS ARRAYS AND OBJECTS
@@ -94,6 +99,7 @@ console.log(greet("Owen"));
 
 // Problem 4a: Create an array of 5 of your favourite movies.
 //             Log each one on its own line using a for...of loop.
+
 
 
 // Problem 4b: Using the same (or a new) array, log only the
