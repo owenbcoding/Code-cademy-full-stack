@@ -100,10 +100,21 @@ console.log(add(5));
 // Problem 4a: Create an array of 5 of your favourite movies.
 //             Log each one on its own line using a for...of loop.
 
+const favouriteMovies = [ 
+    "Inception",
+    "Iron man",
+    "Spider man",
+    "Avatar",
+    "Blood Diamond"
+]
 
+for (const movie of favouriteMovies) { 
+    console.log(movie);
+}
 
 // Problem 4b: Using the same (or a new) array, log only the
 //             first and last items by their index.
+
 
 
 // Problem 4c: Create an array of numbers. Use .filter() to
